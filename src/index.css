@@ -1,0 +1,40 @@
+@import './styles/theme.css';
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #022C22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #064E3B;
+  border: 2px solid #022C22;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D6B56D;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--color-champagne-gold);
+  color: var(--color-midnight-green);
+}
+
+/* Smooth Image Loading */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility to prevent horizontal layout shift */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

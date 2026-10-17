@@ -1,0 +1,374 @@
+/* ==========================================================================
+   FURSAN ISLAMIC ACADEMY — LUXURY DESIGN SYSTEM & THEME TOKENS
+   Palette: Royal Emerald, Midnight Green, Deep Navy, Champagne Gold, Soft Ivory
+   ========================================================================== */
+
+:root {
+  /* Brand Primary Colors */
+  --color-royal-emerald: #064E3B;
+  --color-royal-emerald-light: #0d6b52;
+  --color-midnight-green: #022C22;
+  --color-deep-navy: #101B3D;
+  --color-deep-navy-light: #182859;
+
+  /* Luxury Accents */
+  --color-champagne-gold: #D6B56D;
+  --color-champagne-gold-light: #e6cb8f;
+  --color-muted-gold: #B99A50;
+  --color-gold-glow: rgba(214, 181, 109, 0.25);
+  --color-gold-glow-subtle: rgba(214, 181, 109, 0.12);
+
+  /* Light Surfaces & Backgrounds */
+  --color-soft-ivory: #FFFCF5;
+  --color-warm-white: #FFFFFF;
+  --color-pale-sage: #E6F0E9;
+  --color-pale-sage-light: #f2f7f4;
+
+  /* Typography Colors */
+  --color-slate-text: #344054;
+  --color-slate-muted: #667085;
+  --color-text-on-dark: #F8FAF9;
+  --color-text-on-dark-muted: #C2D6CE;
+  --color-text-on-gold: #022C22;
+
+  /* Borders & Dividers */
+  --border-light: rgba(6, 78, 59, 0.08);
+  --border-gold: rgba(214, 181, 109, 0.35);
+  --border-gold-strong: rgba(214, 181, 109, 0.65);
+  --border-dark: rgba(214, 181, 109, 0.15);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #022C22 0%, #064E3B 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(2, 44, 34, 0.88) 0%, rgba(6, 78, 59, 0.92) 100%);
+  --gradient-cta-gold: linear-gradient(135deg, #D6B56D 0%, #B99A50 100%);
+  --gradient-dark-card: linear-gradient(145deg, #064E3B 0%, #022C22 100%);
+  --gradient-light-section: linear-gradient(180deg, #FFFCF5 0%, #E6F0E9 100%);
+  --gradient-emerald-radial: radial-gradient(circle at 50% 30%, rgba(6, 78, 59, 0.35) 0%, transparent 70%);
+  --gradient-gold-radial: radial-gradient(circle at 50% 50%, rgba(214, 181, 109, 0.18) 0%, transparent 65%);
+
+  /* Typography */
+  --font-serif: 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 6px rgba(2, 44, 34, 0.06);
+  --shadow-md: 0 6px 16px rgba(2, 44, 34, 0.08), 0 2px 4px rgba(2, 44, 34, 0.04);
+  --shadow-lg: 0 14px 32px rgba(2, 44, 34, 0.12), 0 4px 10px rgba(2, 44, 34, 0.06);
+  --shadow-card-hover: 0 20px 40px rgba(6, 78, 59, 0.15), 0 6px 14px rgba(214, 181, 109, 0.18);
+  --shadow-gold-button: 0 4px 20px rgba(214, 181, 109, 0.38);
+  --shadow-gold-button-hover: 0 8px 26px rgba(214, 181, 109, 0.55);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+}
+
+/* Base Reset & Core Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-soft-ivory);
+  color: var(--color-slate-text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
+  color: inherit;
+}
+
+p {
+  color: inherit;
+}
+
+/* Links & Buttons Reset */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Focus Visible Accessible Styling */
+:focus-visible {
+  outline: 2px solid var(--color-champagne-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Section Spacing */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Gold Accent Helpers */
+.text-gold {
+  color: var(--color-champagne-gold);
+}
+
+.text-emerald {
+  color: var(--color-royal-emerald);
+}
+
+.bg-emerald {
+  background-color: var(--color-royal-emerald);
+}
+
+.bg-midnight {
+  background-color: var(--color-midnight-green);
+}
+
+.bg-navy {
+  background-color: var(--color-deep-navy);
+}
+
+.bg-ivory {
+  background-color: var(--color-soft-ivory);
+}
+
+.bg-sage {
+  background-color: var(--color-pale-sage);
+}
+
+/* Luxury Islamic Geometric Pattern Background Overlay */
+.islamic-pattern-bg {
+  background-image: radial-gradient(var(--color-gold-glow) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.islamic-star-pattern {
+  background-image: 
+    radial-gradient(circle at 100% 150%, var(--color-gold-glow-subtle) 24%, transparent 25%),
+    radial-gradient(circle at 0% 150%, var(--color-gold-glow-subtle) 24%, transparent 25%),
+    radial-gradient(circle at 50% 100%, var(--color-gold-glow-subtle) 10%, transparent 11%),
+    radial-gradient(circle at 100% 0%, var(--color-gold-glow-subtle) 15%, transparent 16%),
+    radial-gradient(circle at 0% 0%, var(--color-gold-glow-subtle) 15%, transparent 16%);
+  background-size: 60px 60px;
+}
+
+/* Gold Gradient Badge */
+.gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(214, 181, 109, 0.12);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  color: var(--color-champagne-gold);
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Ornamental Divider */
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ornamental-divider .line {
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, var(--color-champagne-gold));
+}
+
+.ornamental-divider .line.reverse {
+  background: linear-gradient(90deg, var(--color-champagne-gold), transparent);
+}
+
+.ornamental-divider .symbol {
+  color: var(--color-champagne-gold);
+  font-size: 1rem;
+}
+
+/* Luxury Card Styles */
+.luxury-card {
+  background-color: var(--color-warm-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-gold);
+}
+
+.luxury-card-dark {
+  background: var(--gradient-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-on-dark);
+  box-shadow: 0 12px 30px rgba(2, 44, 34, 0.35);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.luxury-card-dark:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-gold-strong);
+  box-shadow: 0 18px 40px rgba(2, 44, 34, 0.5), 0 0 20px var(--color-gold-glow);
+}
+
+/* Primary Luxury CTA Button */
+.btn-gold-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--gradient-cta-gold);
+  color: var(--color-text-on-gold);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-gold-button);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-gold-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold-button-hover);
+  filter: brightness(1.05);
+  color: var(--color-text-on-gold);
+}
+
+.btn-gold-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Ghost/Emerald Button */
+.btn-secondary-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: var(--color-soft-ivory);
+  border: 1px solid rgba(214, 181, 109, 0.4);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary-ghost:hover {
+  background: rgba(214, 181, 109, 0.16);
+  border-color: var(--color-champagne-gold);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+/* WhatsApp Brand Button */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY: PREFERS REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .floating-crescent,
+  .twinkling-star {
+    animation: none !important;
+    transform: none !important;
+  }
+}
